@@ -1,14 +1,13 @@
 #include "Network.h"
 #include <addons/TokenHelper.h>
 
-/*Define these value match to yours*/
-#define WIFI_SSID "WIFI_AP"
-#define WIFI_PASSWORD "WIFI_PASSWORD"
+#define WIFI_SSID "TeaChanathip"
+#define WIFI_PASSWORD "55555555"
 
-#define API_KEY "API_KEY"
-#define FIREBASE_PROJECT_ID "PROJECT_ID"
-#define USER_EMAIL "USER_EMAIL" // you can add your email on firebase authentication
-#define USER_PASSWORD "USER_PASSWORD" // Not your email password, you can set on firebase authentication
+#define API_KEY "AIzaSyCDFJJp_qo4Q8-gP77AnWyRhQGAuLh6UGw"
+#define FIREBASE_PROJECT_ID "embeddedlab-prj"
+#define USER_EMAIL "teachanthip@gmail.com" // you can add your email on firebase authentication
+#define USER_PASSWORD "testpassword1234" // Not your email password, you can set on firebase authentication
 
 static Network *instance = NULL;
 

@@ -16,8 +16,7 @@ NTPClient timeClient(ntpUp, "pool.ntp.org");
 
 EspSoftwareSerial::UART DataSerial;
 
-String Data[4]={"0","0","0","0"};
-// humid, lightLevel, soilHumid, temp
+String Data[4]={"0","0","0","0"};// humid, lightLevel, soilHumid, temp
 
 void setup() {
   // put your setup code here, to run once:
@@ -29,14 +28,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   Update_Data();
-  //Upload to fire store every 10 minute
   if (Firebase.ready() && (millis() - dataMillis > 600000 || dataMillis == 0)){
     dataMillis = millis();
     timeClient.update();
-    //Serial.println(Data[0]);
-    //Serial.println(Data[1]);
-    //Serial.println(Data[2]);
-    //Serial.println(Data[3]);
     unsigned long now = timeClient.getEpochTime();
     network->firestoreDataUpdate(Data[0], Data[1], Data[2], Data[3], now);
   }
@@ -48,7 +42,6 @@ void initNetwork(){
   network->firebaseInit();
 }
 
-//Send from nucleo-f411re via UART1 in format "humid|lightLevel|soilHumid|temp"
 void Update_Data(){
   if(DataSerial.available() > 0){
     Data[0]="";
@@ -61,5 +54,9 @@ void Update_Data(){
       if(c=='|') state++;
       else Data[state]+=c;
     }
+    Serial.println(Data[0]);
+    Serial.println(Data[1]);
+    Serial.println(Data[2]);
+    Serial.println(Data[3]);
   }
 }
