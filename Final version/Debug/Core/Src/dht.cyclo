@@ -1,0 +1,8 @@
+dht.c:23:10:DWT_Delay_Init	2
+dht.c:54:22:delay	2
+dht.c:65:6:Set_Pin_Output	1
+dht.c:74:6:Set_Pin_Input	1
+dht.c:84:6:DHT_Start	1
+dht.c:103:9:DHT_Check_Response	4
+dht.c:118:9:DHT_Read	5
+dht.c:137:6:DHT_GetData	2
