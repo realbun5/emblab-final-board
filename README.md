@@ -1,11 +1,11 @@
 # emblab-final-board
  board code 
 
-# Esp8266
+# ESP8266
 
 ## Description
 
-This project utilizes the [Firebase Firestore](https://firebase.google.com/docs/firestore) API to store data received from an STM32 sensor via the UART (Universal Asynchronous Receiver-Transmitter) protocol and transmitted to the Esp8266 module. The data is updated on the Esp8266 every 10 seconds and uploaded to Firestore every 10 minutes.
+This project utilizes the [Firebase Firestore](https://firebase.google.com/docs/firestore) API to store data received from an STM32 sensor via the UART (Universal Asynchronous Receiver-Transmitter) protocol and transmitted to the ESP8266 module. The data is updated on the ESP8266 every 10 seconds and uploaded to Firestore every 10 minutes.
 
 ## Setup
 
@@ -28,7 +28,7 @@ To set up the project, follow these steps:
 
 ## Connecting to STM32
 
-To connect the Esp8266 to the STM32:
+To connect the ESP8266 to the STM32:
 
 - Connect the ESP8266 Ground to the STM32 Ground.
 - Connect ESP8266 RX (`D7`) to STM32 TX (`PA9` for the default USART1 in STM32CubeIDE).
