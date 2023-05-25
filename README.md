@@ -3,6 +3,16 @@
 
 # ESP8266
 
+## Credits
+
+Chanathip Kittikaiwan 6431310221
+
+Poonyawee Wongsrisujarit 6431330821
+
+Natchanon Mongkoltananont 6432047421
+
+Panat Chindanuwat 6432101621
+
 ## Description
 
 This project utilizes the [Firebase Firestore](https://firebase.google.com/docs/firestore) API to store data received from an STM32 sensor via the UART (Universal Asynchronous Receiver-Transmitter) protocol and transmitted to the ESP8266 module. The data is updated on the ESP8266 every 10 seconds and uploaded to Firestore every 10 minutes.
